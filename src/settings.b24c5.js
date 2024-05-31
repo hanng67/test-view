@@ -1,1 +1,0 @@
-window._CCSettings={platform:"web-mobile",groupList:["default","box","reward","group 3"],collisionMatrix:[[true],[false,false,true],[false,true,true],[false,false,false,false]],hasResourcesBundle:false,hasStartSceneBundle:false,remoteBundles:[],subpackages:[],launchScene:"db://assets/scenes/jigsaw.fire",orientation:"portrait",jsList:[],bundleVers:{internal:"69b9a",main:"1af69"}};
