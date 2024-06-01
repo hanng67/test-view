@@ -1,40 +1,5 @@
 // camera.js
 
-// let video;
-// let canvas;
-// let context;
-
-// function startCamera() {
-//   video = document.createElement("video");
-//   canvas = document.createElement("canvas");
-//   context = canvas.getContext("2d");
-
-//   // Request the rear camera
-//   navigator.mediaDevices
-//     .getUserMedia({
-//       video: { facingMode: "environment" },
-//     })
-//     .then((stream) => {
-//       video.srcObject = stream;
-//       video.play();
-//     })
-//     .catch((error) => {
-//       console.error("Error accessing the rear camera: ", error);
-//     });
-// }
-
-// function captureImage() {
-//   if (!video || !context) {
-//     console.error("Camera not initialized");
-//     return null;
-//   }
-
-//   canvas.width = video.videoWidth;
-//   canvas.height = video.videoHeight;
-//   context.drawImage(video, 0, 0, canvas.width, canvas.height);
-//   return canvas.toDataURL("image/png");
-// }
-
 function processImage(capturedImageSrc, callback) {
   // Load reference image (should be hosted somewhere accessible)
   let referenceImage = new Image();
@@ -105,14 +70,6 @@ function processImage(capturedImageSrc, callback) {
   };
 }
 
-// function checkImage() {
-//   const capturedImageData = captureImage();
-//   if (!capturedImageData) {
-//     return false;
-//   }
-//   return processImage(capturedImageData);
-// }
-
 function checkImage(byteArray, callback) {
   let canvas = document.createElement("canvas");
   let context = canvas.getContext('2d');
@@ -130,9 +87,7 @@ function checkImage(byteArray, callback) {
   };
 
   img.src = url;
-  // return false; // Default return until the image is processed
 }
 
 // Functions to be called from Unity
-// window.startCamera = startCamera;
 window.checkImage = checkImage;
